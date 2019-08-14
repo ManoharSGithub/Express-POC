@@ -7,15 +7,15 @@
       </div>
       <table class="table col-md-6 mx-auto">
         <tbody>
-          <tr>
+          <tr v-if="first_name">
             <td>First Name</td>
             <td>{{first_name}}</td>
           </tr>
-          <tr>
+          <tr v-if="last_name">
             <td>Last Name</td>
             <td>{{last_name}}</td>
           </tr>
-          <tr>
+          <tr v-if="email">
             <td>Email</td>
             <td>{{email}}</td>
           </tr>

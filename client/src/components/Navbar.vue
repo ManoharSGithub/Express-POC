@@ -6,6 +6,9 @@
         <li class="nav-item">
           <router-link class="nav-link" to="/">Home</router-link>
         </li>
+         <li class="nav-item">
+          <router-link class="nav-link" to="/admin">Admin</router-link>
+        </li>
         <li v-if="auth==''" class="nav-item">
           <router-link class="nav-link" to="/login">Login</router-link>
         </li>
