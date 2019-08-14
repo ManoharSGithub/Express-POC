@@ -15,10 +15,10 @@ mongoose.connect(mongoURI,{useNewUrlParser:true})
 .then(()=>console.log("ManoharDB Connected"))
 .catch(err=> console.log(err))
 
-var Users=require("./routes/Users")
+var Users=require("../routes/Users")
 
 app.use("/users",Users)
 
 app.listen(port,function(){
-    console.log("Server is running on Port :" + port)
+    console.log("Server is running on Port: " + port)
 })
