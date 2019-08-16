@@ -79,7 +79,7 @@ users.get('/admin', (req, res) => {
 })
 
 users.delete('/admin/:id', function (req, res) {
-    User.findOneAndDelete(req.params.id, function (err) {
+    User.findByIdAndRemove(req.params.id, function (err) {
         if (err) return next(err);
         res.send('Deleted successfully!');
     })
