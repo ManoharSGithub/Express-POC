@@ -3,7 +3,7 @@ var cors =require("cors")
 var bodyParser = require("body-parser")
 var app=express()
 var mongoose = require("mongoose")
-var port= process.env.PORT || 8081
+var port= 8081
 
 app.use(bodyParser.json())
 app.use(cors())
@@ -15,7 +15,7 @@ mongoose.connect(mongoURI,{useNewUrlParser:true})
 .then(()=>console.log("ManoharDB Connected"))
 .catch(err=> console.log(err))
 
-var Users=require("./../routes/Users")
+var Users=require("./routes/Users")
 
 app.use("/users",Users)
 
